@@ -2,6 +2,7 @@ package com.example.observationservice.service;
 
 import com.example.observationservice.entity.Observations;
 import com.example.observationservice.repository.ObservationsRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -19,6 +20,11 @@ public class ObservationsServiceTest {
     @InjectMocks
     ObservationsService observationsService;
 
+
+    @BeforeEach
+    public void setup() {
+
+    }
     @Test
     void testCreateObservations(){
        Observations observations = observationsService.createObservations(1,1,"test",new Date(),"http://test");
